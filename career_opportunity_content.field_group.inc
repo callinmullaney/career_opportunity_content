@@ -52,8 +52,8 @@ function career_opportunity_content_field_group_info() {
     'children' => array(
       0 => 'body',
       1 => 'field_responsibilities',
-      2 => 'title',
-      3 => 'field_qualifications',
+      2 => 'field_qualifications',
+      3 => 'title',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -66,6 +66,34 @@ function career_opportunity_content_field_group_info() {
     ),
   );
   $export['group_content|node|career_opportunity|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_meta|node|career_opportunity|form';
+  $field_group->group_name = 'group_meta';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'career_opportunity';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Meta Tags',
+    'weight' => '100',
+    'children' => array(
+      0 => 'field_meta_description',
+      1 => 'field_meta_keywords',
+    ),
+    'format_type' => 'tab',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-meta field-group-tab',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $export['group_meta|node|career_opportunity|form'] = $field_group;
 
   return $export;
 }
