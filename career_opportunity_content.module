@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Career Opportunity Content feature.
+ */
+
+include_once 'career_opportunity_content.features.inc';
